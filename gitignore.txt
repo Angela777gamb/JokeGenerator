@@ -1,0 +1,5 @@
+*.pdf
+*.txt
+!text.txt
+temp*
+**/tst
