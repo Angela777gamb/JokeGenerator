@@ -1,4 +1,5 @@
 *.pdf
+!Jokes.pdf
 *.txt
 !text.txt
 temp*
