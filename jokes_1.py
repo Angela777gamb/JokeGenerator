@@ -1,6 +1,11 @@
+from tkinter.filedialog import test
+
 from pypdf import PdfReader
 from pathlib import Path
 import re
+import random
+import math
+import tkinter as tk
 
 def extract_text_from_pdf(file_name, get_rid_of_strings):
 
@@ -32,8 +37,14 @@ def text_to_parts(text):
     return parts
 
 # test
-# remove_list = ["One Liner Jokes"]
-# text = extract_text_from_pdf("Jokes.pdf", remove_list)
-# parts = text_to_parts(text)
-# for joke in parts:
-#     print(joke, '\n')
+remove_list = ["One Liner Jokes"]
+text = extract_text_from_pdf("Jokes.pdf", remove_list)
+parts = text_to_parts(text)
+
+
+def get_random_joke(parts):
+    """ return a random joke from the list of jokes """
+    random.seed()
+    return random.choice(parts)
+print(get_random_joke(parts))
+
