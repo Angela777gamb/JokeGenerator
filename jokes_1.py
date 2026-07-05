@@ -28,7 +28,7 @@ def extract_text_from_pdf(file_name, get_rid_of_strings):
     return text
 
 def text_to_parts(text):
-    """ remove enumeration and split the text """
+    """ remove enumeration and split the text separated by enumeration """
     parts = []
     # This pattern matches one or more digits and following '.'
     pattern = r"\d+\."
