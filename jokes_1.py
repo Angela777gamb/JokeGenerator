@@ -73,7 +73,7 @@ print(get_random_joke(parts))
 class PulsingGlowApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("Prescript device")
+        self.root.title("joke device")
         background_color = "black"
         self.root.configure(bg=background_color)
         screen_width = root.winfo_screenwidth()
@@ -89,9 +89,9 @@ class PulsingGlowApp:
         self.label = tk.Label(root, text="get random joke(parts)", font=("Helvetica", 24), bg="black")
         self.label.place(relx=0.5, rely=0.5, anchor='center')
 
-        self.button = tk.Button(root, text="Get New Joke", command=lambda: self.label.config(text=get_random_joke(parts)), font=("Helvetica", 16), bg='black', fg='royalblue', activebackground='black', activeforeground='royalblue', highlightbackground='black', highlightcolor='black', highlightthickness=0, bd=0)
+        self.button = tk.Button(root, text="click me to get a joke!", command=lambda: self.label.config(text=get_random_joke(parts)), font=("Helvetica", 16), bg='black', fg='royalblue', activebackground='black', activeforeground='royalblue', highlightbackground='black', highlightcolor='black', highlightthickness=0, bd=0)
         self.button.place(relx=0.5, rely=0.6, anchor='center')
-        glow = tk.Label(root, text="The will of the city", bg='black', fg='royalblue', font=("Helvetica", 12))
+        glow = tk.Label(root, text="haha funnies", bg='black', fg='royalblue', font=("Helvetica", 12))
         glow.place(relx=0.5, rely=0.9, anchor='center')
         # addphoto = tk.PhotoImage(file="Index") 
         # self.tk.call('INDEX.png', 'iconphoto', root._w, addphoto)  # Set window icon
